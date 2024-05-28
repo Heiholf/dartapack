@@ -1,4 +1,4 @@
-import 'package:dartapack/dart_a_pack.dart';
+import 'package:dartapack/dartapack.dart';
 
 void main() {
   var awesome = Awesome();

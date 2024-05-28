@@ -1,0 +1,12 @@
+// **************************************************************************
+// WidgetGenerator
+// **************************************************************************
+
+part 'give.g.dart';
+
+class Give extends Widget {
+  @override
+  String compile() {
+    return "give @a minecraft:dirt 20";
+  }
+}

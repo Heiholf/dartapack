@@ -1,0 +1,28 @@
+targets:
+  $default:
+    builders:
+      source_gen|combining_builder:
+        generate_for:
+          - lib/src/base/*
+        enabled: true
+  dartapack:
+    builders:
+      dartapack|widgetBuilder:
+        generate_for:
+          - lib/src/base/*
+        enabled: true
+        #options:
+
+builders:
+  widgetBuilder:
+    import: "package:dartapack/dartapack.dart"
+    builder_factories: ["widgetBuilder"]
+    build_extensions:
+      ".dart":
+        - ".g.dart"
+    build_to: source
+    auto_apply: dependents
+    defaults:
+      options:
+        format: 20
+    applies_builders: ["source_gen|combining_builder"]
